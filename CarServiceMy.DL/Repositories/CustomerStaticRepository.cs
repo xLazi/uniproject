@@ -1,7 +1,7 @@
-﻿using CarService3.DL.Interfaces;
-using CarService3.Models.Entities;
+using CarServiceMy.DL.Interfaces;
+using CarServiceMy.Models.Entities;
 
-namespace CarService3.DL.Repositories
+namespace CarServiceMy.DL.Repositories
 {
     internal class CustomerStaticRepository : ICustomerRepository
     {

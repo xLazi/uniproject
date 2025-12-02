@@ -1,8 +1,8 @@
-﻿using CarService3.DL.Interfaces;
-using CarService3.DL.Repositories;
+﻿using CarServiceMy.DL.Interfaces;
+using CarServiceMy.DL.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CarService3.DL
+namespace CarServiceMy.DL
 {
     public static class DependencyInjection
     {

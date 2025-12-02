@@ -1,6 +1,6 @@
-﻿using CarService3.Models.Entities;
+﻿using CarServiceMy.Models.Entities;
 
-namespace CarService3.DL.Interfaces
+namespace CarServiceMy.DL.Interfaces
 {
     public interface ICarRepository
     {
