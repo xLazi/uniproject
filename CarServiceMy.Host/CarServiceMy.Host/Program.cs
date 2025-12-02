@@ -1,3 +1,6 @@
+using CarServiceMy.BL;
+using CarServiceMy.DL;
+using CarServiceMy.DL.Interfaces;
 using Microsoft.OpenApi.Models;
 
 namespace CarServiceMy.Host
@@ -9,12 +12,15 @@ namespace CarServiceMy.Host
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services
+                .AddDataLayer()
+                .AddBusinessLogicLayer();
 
             builder.Services.AddControllers();
-
+         
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Service 2", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Service My", Version = "v1" });
             });
 
             var app = builder.Build();
@@ -29,7 +35,7 @@ namespace CarServiceMy.Host
 
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("v1/swagger.json", "Car Service 2 V1");
+                options.SwaggerEndpoint("v1/swagger.json", "Car Service My V1");
             });
 
             app.UseSwagger();
